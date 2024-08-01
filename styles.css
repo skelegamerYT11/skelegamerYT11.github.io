@@ -58,13 +58,22 @@ section h2 {
 .project a:hover {
     background: #555;
 }
-
 footer {
     background: #333;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 0px 0;
     position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.github {
+    background: #33333300;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: right;
     bottom: 0;
     width: 100%;
 }
