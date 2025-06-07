@@ -1,14 +1,19 @@
-/* MR ROBOT / HACKER THEME */
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Share Tech Mono', monospace;
     background-color: #0a0a0a;
     color: #0f0;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* ===== LOADING SCREEN ===== */
+/* ===== LOADING/LOGIN SCREEN ===== */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -23,37 +28,41 @@ body {
 }
 
 .terminal-loader {
-    width: 80%;
-    max-width: 600px;
-    border: 1px solid #333;
+    width: 90%;
+    max-width: 700px;
+    border: 1px solid #1a1a1a;
     background: #111;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
     overflow: hidden;
 }
 
 .terminal-header {
     background: #222;
-    padding: 5px 10px;
+    padding: 8px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #333;
 }
 
 .terminal-title {
     color: #ccc;
+    font-size: 0.9rem;
 }
 
 .terminal-controls {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .control {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: #333;
+    cursor: pointer;
 }
 
 .control.close { background: #ff5f56; }
@@ -62,36 +71,73 @@ body {
 
 .terminal-text {
     padding: 20px;
-    font-size: 18px;
+    font-size: 1.1rem;
+    min-height: 300px;
 }
 
 .typed-text {
     color: #0f0;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== TYPING/CURSOR EFFECTS ===== */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .blinking-cursor {
     animation: blink 1s infinite;
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+#login-line::after,
+#password-line::after {
+    content: '_';
+    animation: blink 1s infinite;
 }
 
 /* ===== MAIN CONTENT ===== */
+#content {
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
 .container {
-    width: 80%;
+    width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 0 30px;
     border-bottom: 1px dashed #333;
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #4a4;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 30px 0 15px;
     color: #0f0;
 }
 
@@ -99,79 +145,90 @@ h1, h2, h3 {
     color: #ff5555;
 }
 
+/* ===== PHOTO GRID ===== */
 .photo-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .photo-item {
-    flex: 1;
+    flex: 1 1 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
 }
 
 .photo-item img {
     width: 100%;
+    height: auto;
     border: 1px solid #333;
-    filter: grayscale(50%) contrast(120%);
-    transition: 0.3s;
+    filter: grayscale(70%) contrast(120%) brightness(0.8);
+    transition: all 0.4s ease;
 }
 
-.photo-item img:hover {
-    filter: grayscale(0%) contrast(100%);
+.photo-item:hover img {
+    filter: grayscale(20%) contrast(100%) brightness(1);
     border-color: #0f0;
+    transform: scale(1.02);
 }
 
+/* ===== SKILLS LIST ===== */
 ul {
     list-style-type: none;
-    padding: 0;
+    margin: 20px 0;
 }
 
-ul li:before {
+ul li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
     content: "> ";
     color: #ff5555;
+    position: absolute;
+    left: 0;
 }
 
+/* ===== FOOTER ===== */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     border-top: 1px dashed #333;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-a {
-    color: #0f0;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* GLITCH EFFECT */
+/* ===== GLITCH EFFECTS ===== */
 .glitch {
     position: relative;
+    display: inline-block;
 }
 
-.glitch::before, .glitch::after {
+.glitch::before,
+.glitch::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.8;
+    background: #0a0a0a;
 }
 
 .glitch::before {
     color: #f0f;
     z-index: -1;
-    animation: glitch-effect 3s infinite;
+    animation: glitch-effect 3s infinite linear;
 }
 
 .glitch::after {
     color: #0ff;
     z-index: -2;
-    animation: glitch-effect 2s infinite reverse;
+    animation: glitch-effect 2s infinite linear reverse;
 }
 
 @keyframes glitch-effect {
@@ -183,6 +240,70 @@ a:hover {
     100% { transform: translate(0); }
 }
 
+.glitch-link {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-link:hover {
+    color: #0f0;
+    text-decoration: none;
+}
+
+.glitch-link::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #0f0;
+    opacity: 0;
+    animation: glitch-link 2s infinite;
+}
+
+@keyframes glitch-link {
+    0%, 100% { opacity: 0; transform: translate(0); }
+    25% { opacity: 0.5; transform: translate(-2px, 2px); }
+    50% { opacity: 0.8; transform: translate(2px, -2px); }
+    75% { opacity: 0.3; transform: translate(-2px, -2px); }
+}
+
+/* ===== BLINKING ELEMENTS ===== */
 .blink {
-    animation: blink 1s infinite;
+    animation: blink 1.5s infinite steps(1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .terminal-text {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .photo-grid {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-loader {
+        width: 95%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    header {
+        padding: 30px 0;
+    }
 }
