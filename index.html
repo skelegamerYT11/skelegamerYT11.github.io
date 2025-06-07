@@ -3,68 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Restricted</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MrSkele | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        .command {
+            color: #00ff41;
+            font-weight: bold;
+        }
+        .prompt {
+            color: #00ff41;
+        }
+        .hint {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <!-- Login Screen (Mr. Robot Style) -->
-    <div id="loading-screen">
-        <div class="terminal-loader">
+    <div class="login-container" id="login-container">
+        <div class="terminal">
             <div class="terminal-header">
-                <div class="terminal-title">fsociety@root:~</div>
-                <div class="terminal-controls">
-                    <span class="control close"></span>
-                    <span class="control minimize"></span>
-                    <span class="control maximize"></span>
+                <div class="terminal-buttons">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
                 </div>
+                <div class="terminal-title">root@mrSkele:~</div>
             </div>
-            <div class="terminal-text">
-                <span class="typed-text">> fsociety v5.3.1</span><br>
-                <span class="typed-text">> Initializing secure connection...</span><br>
-                <span class="typed-text">> Accessing hidden network...</span><br>
-                <br>
-                <span class="typed-text">> Enter credentials to proceed:</span><br>
-                <br>
-                <span id="login-line" class="typed-text">login: _</span><br>
-                <span id="password-line" class="hidden">password: ***********</span><br>
-                <span id="access-line" class="hidden">> Welcome back, MrSkele.</span><br>
-                <span id="press-enter" class="hidden">> Press [ENTER] to continue...</span>
+            <div class="terminal-body">
+                <div class="login-screen">
+                    <div class="logo">MR_SKELE</div>
+                    <div class="login-form">
+                        <div class="input-group">
+                            <label for="username">USERNAME:</label>
+                            <input type="text" id="username" value="MrSkele" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">PASSWORD:</label>
+                            <input type="password" id="password" value="************" readonly>
+                        </div>
+                        <button id="login-btn" class="glow-btn">ACCEDI</button>
+                    </div>
+                    <div class="loading-bar" id="loading-bar"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Content (Hidden until login) -->
-    <div id="content" style="display: none;">
-        <!-- Il resto del tuo portfolio qui -->
-        <header>
-            <div class="container">
-                <h1><span class="glitch" data-text="> whoami">> whoami</span></h1>
-                <h2>MrSkele@cybersec:~$ <span class="typed-cmd">cat about_me.txt</span></h2>
+    <div class="portfolio-container" id="portfolio-container" style="display: none;">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-btn red" id="close-btn"></span>
+                    <span class="terminal-btn yellow" id="minimize-btn"></span>
+                    <span class="terminal-btn green"></span>
+                </div>
+                <div class="terminal-title">portfolio@mrSkele:~</div>
             </div>
-        </header>
-
-        <section id="about">
-            <div class="container">
-                <p>> 16 y/o cybersecurity enthusiast</p>
-                <p>> Training on <span class="highlight">TryHackMe</span> & <span class="highlight">HackTheBox</span></p>
-                
-                <div class="photo-grid">
-                    <div class="photo-item">
-                        <img src="foto1.jpg" alt="Hacking Setup">
+            <div class="terminal-body">
+                <div class="portfolio-content">
+                    <div class="header">
+                        <h1>MR_SKELE</h1>
+                        <p>// Cybersecurity Enthusiast</p>
                     </div>
-                    <div class="photo-item">
-                        <img src="foto2.jpg" alt="CTF Event">
+                    
+                    <div class="section">
+                        <h2>> PROGETTI</h2>
+                        <div class="projects-grid" id="projects-grid"></div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>> CONTATTI</h2>
+                        <div class="contacts">
+                            <p><span class="label">Telegram:</span> @skeleYT11</p>
+                            <p><span class="label">PayPal:</span> paypal.me/skeleYT11</p>
+                            <p><span class="label">GitHub:</span> https://github.com/skelegamerYT11</p>
+                            <p><span class="label">Email:</span> andreagiambrone11@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2>> INFO</h2>
+                        <div class="info">
+                            <p>Ciao! Sono un ragazzo di 16 anni appassionato di cybersecurity, programmazione e hacking etico.</p>
+                            <p>Questo portfolio è stato creato per mostrare i miei progetti e condividere le mie conoscenze.</p>
+                            <p>Se vuoi collaborare o hai domande, contattami su Telegram!</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <p>> <span class="blink">Contact:</span> <a href="mailto:mr@skel.et" class="glitch-link" data-text="mr@skel.et">mr@skel.et</a></p>
-            </div>
-        </footer>
+        </div>
     </div>
 
     <script src="script.js"></script>
