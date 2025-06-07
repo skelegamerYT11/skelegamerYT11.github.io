@@ -3,67 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio di Skele</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CyberPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Portfolio di Skele</h1>
-    </header>
-
-    <section id="about">
-        <h2>Chi Sono</h2>
-        <p>Sono un ragazzo di 15 anni appassionato del mondo dell'ethical hacking. Amo esplorare il campo della sicurezza informatica e sviluppare strumenti che possono aiutare a identificare e risolvere le vulnerabilità nei sistemi. Utilizzo vari programmi e strumenti come Nmap, Hydra, Aircrack-ng, Wifite, Anon-SMS, ARP, e John the Ripper per condurre test di sicurezza e sviluppare soluzioni innovative.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Progetti</h2>
-        <div class="project">
-            <h3>InstaOSINT</h3>
-            <p>Questo strumento permette di eseguire operazioni OSINT (Open Source Intelligence) su account Instagram. È utile per raccogliere informazioni pubblicamente disponibili su un determinato account, come post, follower, seguiti, e altre attività.</p>
-            <a href="https://github.com/skelegamerYT11/InstaOSINT" target="_blank">Repository GitHub</a>
+    <!-- Loading Screen (Mr. Robot Style) -->
+    <div id="loading-screen">
+        <div class="terminal-loader">
+            <div class="terminal-header">
+                <div class="terminal-title">root@kali:~</div>
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+            </div>
+            <div class="terminal-text">
+                <span class="typed-text">> Initializing system...</span><br>
+                <span class="typed-text">> Bypassing firewalls...</span><br>
+                <span class="typed-text">> Access granted.</span><br>
+                <span class="blinking-cursor">_</span>
+            </div>
         </div>
-        <div class="project">
-            <h3>StealthShell-Win11-AV-Bypass-Digispark</h3>
-            <p>Questo progetto mira a sviluppare un payload capace di bypassare gli antivirus su Windows 11 utilizzando un dispositivo Digispark. Il tool è stato progettato per dimostrare come i dispositivi di attacco fisici possono essere utilizzati per testare la sicurezza dei sistemi Windows.</p>
-            <a href="https://github.com/skelegamerYT11/StealthShell-Win11-AV-Bypass-Digispark" target="_blank">Repository GitHub</a>
-        </div>
-    </section>
+    </div>
 
-    <section class="new-section"></section>
+    <!-- Main Content (Appears after loading) -->
+    <div id="content" style="display: none;">
+        <header>
+            <div class="container">
+                <h1><span class="glitch" data-text="> whoami">> whoami</span></h1>
+                <h2>[Il_Tuo_Nome]@cybersec:~$ <span class="typed-cmd">cat about_me.txt</span></h2>
+            </div>
+        </header>
 
-    <section id="skills">
-        <h2>Competenze Tecniche</h2>
-        <ul>
-            <li><strong>Linguaggi di Programmazione:</strong> Python, C++</li>
-            <li><strong>Sistemi Operativi:</strong> Windows, Linux</li>
-        </ul>
-    </section>
+        <section id="about">
+            <div class="container">
+                <p>> 16 y/o cybersecurity enthusiast</p>
+                <p>> Training on <span class="highlight">TryHackMe</span> & <span class="highlight">HackTheBox</span></p>
+                
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="foto1.jpg" alt="Hacking Setup">
+                    </div>
+                    <div class="photo-item">
+                        <img src="foto2.jpg" alt="CTF Event">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="community">
-        <h2>Contributi alla Comunità</h2>
-        <p>Ho partecipato a vari progetti di hacking etico, tra cui:</p>
-        <ul>
-            <li>Test di Penetrazione su Reti Wireless</li>
-            <li>Analisi di Vulnerabilità di Applicazioni Web</li>
-            <li>Social Engineering</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <div class="container">
+                <h3>> skills.txt</h3>
+                <ul>
+                    <li>Pentesting Basics</li>
+                    <li>Linux / Bash</li>
+                    <li>Network Security</li>
+                    <li>Web Exploitation</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contatti</h2>
-        <div class="icons">
-            <a class="github" href="https://www.github.com/skelegamerYT11" title="skelegamerYT11 on GitHub!" target="_blank">
-                <img src="githublogo.png" alt="skelegamerYT11 on GitHub!" width="50" height="50">
-            </a>
-            <a class="gmail" href="mailto:skelegamerYT11@gmail.com" title="Email skelegamerYT11!" target="_blank">
-                <img src="maillogo.png" alt="skelegamerYT11 GMAIL!" width="50" height="50">
-            </a>
-        </div>
-    </section>
+        <footer>
+            <div class="container">
+                <p>> <span class="blink">Contact me:</span> <a href="mailto:your@email.com" class="glitch-link" data-text="your@email.com">your@email.com</a></p>
+            </div>
+        </footer>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 skelegamerYT11. Tutti i diritti riservati.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
