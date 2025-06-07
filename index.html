@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberPortfolio</title>
+    <title>Access Restricted</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen (Mr. Robot Style) -->
+    <!-- Login Screen (Mr. Robot Style) -->
     <div id="loading-screen">
         <div class="terminal-loader">
             <div class="terminal-header">
-                <div class="terminal-title">root@kali:~</div>
+                <div class="terminal-title">fsociety@root:~</div>
                 <div class="terminal-controls">
                     <span class="control close"></span>
                     <span class="control minimize"></span>
@@ -20,20 +20,27 @@
                 </div>
             </div>
             <div class="terminal-text">
-                <span class="typed-text">> Initializing system...</span><br>
-                <span class="typed-text">> Bypassing firewalls...</span><br>
-                <span class="typed-text">> Access granted.</span><br>
-                <span class="blinking-cursor">_</span>
+                <span class="typed-text">> fsociety v5.3.1</span><br>
+                <span class="typed-text">> Initializing secure connection...</span><br>
+                <span class="typed-text">> Accessing hidden network...</span><br>
+                <br>
+                <span class="typed-text">> Enter credentials to proceed:</span><br>
+                <br>
+                <span id="login-line" class="typed-text">login: _</span><br>
+                <span id="password-line" class="hidden">password: ***********</span><br>
+                <span id="access-line" class="hidden">> Welcome back, MrSkele.</span><br>
+                <span id="press-enter" class="hidden">> Press [ENTER] to continue...</span>
             </div>
         </div>
     </div>
 
-    <!-- Main Content (Appears after loading) -->
+    <!-- Main Content (Hidden until login) -->
     <div id="content" style="display: none;">
+        <!-- Il resto del tuo portfolio qui -->
         <header>
             <div class="container">
                 <h1><span class="glitch" data-text="> whoami">> whoami</span></h1>
-                <h2>[Il_Tuo_Nome]@cybersec:~$ <span class="typed-cmd">cat about_me.txt</span></h2>
+                <h2>MrSkele@cybersec:~$ <span class="typed-cmd">cat about_me.txt</span></h2>
             </div>
         </header>
 
@@ -53,21 +60,9 @@
             </div>
         </section>
 
-        <section id="skills">
-            <div class="container">
-                <h3>> skills.txt</h3>
-                <ul>
-                    <li>Pentesting Basics</li>
-                    <li>Linux / Bash</li>
-                    <li>Network Security</li>
-                    <li>Web Exploitation</li>
-                </ul>
-            </div>
-        </section>
-
         <footer>
             <div class="container">
-                <p>> <span class="blink">Contact me:</span> <a href="mailto:your@email.com" class="glitch-link" data-text="your@email.com">your@email.com</a></p>
+                <p>> <span class="blink">Contact:</span> <a href="mailto:mr@skel.et" class="glitch-link" data-text="mr@skel.et">mr@skel.et</a></p>
             </div>
         </footer>
     </div>
