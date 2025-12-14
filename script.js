@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             whoami: {
                 description: "Mostra informazioni sull'utente",
                 execute: () => {
-                    return "Utente: MrSkele<br>Livello: Hacker Junior<br>Specialità: Cybersecurity, Python, Linux";
+                    return "Utente: MrSkele<br>Approcio: Gray hat<br>Skill: Cybersecurity, Python, Linux";
                 }
             },
             clear: {
