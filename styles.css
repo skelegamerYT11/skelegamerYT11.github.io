@@ -1,311 +1,64 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Modern Portfolio Interactions */
 
-body {
-    background-color: #0a0a0a;
-    color: #00ff41;
-    font-family: 'Share Tech Mono', monospace;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.terminal {
-    width: 95%;
-    max-width: 900px;
-    height: 600px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
-}
-
-.terminal-header {
-    background-color: #111;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #333;
-}
-
-.terminal-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.terminal-btn {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.terminal-btn.red {
-    background-color: #ff5f56;
-}
-
-.terminal-btn.yellow {
-    background-color: #ffbd2e;
-}
-
-.terminal-btn.green {
-    background-color: #27c93f;
-}
-
-.terminal-title {
-    margin-left: 15px;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-.terminal-body {
-    background-color: #000;
-    padding: 20px;
-    height: 100%;
-    overflow-y: auto;
-    font-size: 1.1rem;
-}
-
-.login-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.logo {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    letter-spacing: 5px;
-    text-shadow: 0 0 10px #00ff41;
-    animation: flicker 8s infinite alternate;
-}
-
-.login-form {
-    width: 100%;
-    max-width: 300px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px 12px;
-    background-color: #111;
-    border: 1px solid #00ff41;
-    color: #00ff41;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    outline: none;
-}
-
-.glow-btn {
-    background-color: transparent;
-    border: 1px solid #00ff41;
-    color: #00ff41;
-    padding: 12px 24px;
-    width: 100%;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.glow-btn:hover {
-    background-color: #00ff41;
-    color: #000;
-    box-shadow: 0 0 10px #00ff41;
-}
-
-.loading-bar {
-    width: 0;
-    height: 2px;
-    background-color: #00ff41;
-    margin-top: 30px;
-    transition: width 2s;
-}
-
-.portfolio-content {
-    padding: 10px;
-}
-
-.header {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 2rem;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
-}
-
-.header p {
-    color: #888;
-    font-style: italic;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section h2 {
-    color: #00ff41;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.project-card {
-    background-color: #111;
-    padding: 15px;
-    border: 1px solid #333;
-    transition: all 0.3s;
-}
-
-.project-card:hover {
-    border-color: #00ff41;
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
-}
-
-.project-card h3 {
-    color: #00ff41;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.project-card p {
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.project-card a {
-    color: #00ff41;
-    text-decoration: none;
-    font-size: 0.8rem;
-    display: inline-block;
-    margin-top: 5px;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
-.contacts p {
-    margin-bottom: 8px;
-}
-
-.label {
-    color: #00ff41;
-    display: inline-block;
-    width: 80px;
-}
-
-.info p {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.console {
-    margin-top: 20px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
-}
-
-.console-output {
-    height: 150px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    font-family: 'Courier New', monospace;
-    background-color: #0a0a0a;
-    padding: 10px;
-    border: 1px solid #333;
-}
-
-.console-input {
-    display: flex;
-    align-items: center;
-}
-
-.console-prompt {
-    color: #00ff41;
-    margin-right: 10px;
-}
-
-.console-input input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #00ff41;
-    color: #00ff41;
-    font-family: 'Share Tech Mono', monospace;
-    flex-grow: 1;
-    padding: 5px;
-    outline: none;
-    font-size: 1rem;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #111;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #00ff41;
-    border-radius: 4px;
-}
-
-@keyframes flicker {
-    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-        opacity: 1;
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
     }
-    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-        opacity: 0.5;
-    }
-}
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+    // 2. Interactive Card Hover Glow Effect
+    // Dynamically tracks the mouse cursor position on cards with cached bounds & requestAnimationFrame to prevent lag
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        let rect = null;
+        
+        card.addEventListener('mouseenter', () => {
+            rect = card.getBoundingClientRect();
+        });
+        
+        card.addEventListener('mousemove', (e) => {
+            if (!rect) {
+                rect = card.getBoundingClientRect();
+            }
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            window.requestAnimationFrame(() => {
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            rect = null;
+        });
+    });
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #00ff41; }
-}
+    // 3. Smooth Fade-in on Scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-.typewriter {
-    overflow: hidden;
-    border-right: 0.15em solid #00ff41;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.15em;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+                observer.unobserve(entry.target); // Trigger once
+            }
+        });
+    }, observerOptions);
+
+    // Apply fade-in to cards and sections for high-end cinematic entry
+    const fadeElements = document.querySelectorAll('.card, .section-header, .glass-box');
+    fadeElements.forEach((el, index) => {
+        el.classList.add('fade-in-element');
+        // Add dynamic staggering delays for list items
+        if (el.classList.contains('card')) {
+            el.style.transitionDelay = `${(index % 3) * 0.1}s`;
+        }
+        scrollObserver.observe(el);
+    });
+});
