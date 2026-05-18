@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrSkele | Developer & Cybersecurity Enthusiast</title>
+    <!-- Plus Jakarta Sans & JetBrains Mono Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Ambient Glow Effects -->
+    <div class="glow-container">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="nav-header">
+        <div class="container nav-container">
+            <a href="#" class="logo-area">
+                <span class="logo-text">Mr<span>Skele</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#projects">Progetti</a>
+                <a href="#skills">Competenze</a>
+                <a href="#philosophy">Filosofia</a>
+                <a href="#contacts">Contatti</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://github.com/skelegamerYT11" target="_blank" class="btn-nav-github">
+                    <i data-lucide="github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span>Disponibile per nuovi progetti</span>
+                </div>
+                <h1>Sviluppo idee.<br>Costruisco software.</h1>
+                <p class="hero-description">
+                    Ciao! Sono MrSkele, uno sviluppatore di 17 anni e mi diverto a creare progetti.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Scopri i miei progetti <i data-lucide="arrow-down"></i>
+                    </a>
+                    <a href="https://github.com/skelegamerYT11" class="btn btn-secondary" target="_blank">
+                        <i data-lucide="github"></i> Profilo GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sleek Glassmorphic Mockup Container (Showcase UI) -->
+            <div class="showcase-wrapper">
+                <div class="glass-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-title">mrskele-system-overview.config</div>
+                    </div>
+                    <div class="window-body">
+                        <div class="code-line"><span class="code-keyword">const</span> developer = {</div>
+                        <div class="code-line indent-1"><span class="code-key">name</span>: <span
+                                class="code-string">"MrSkele"</span>,</div>
+                        <div class="code-line indent-1"><span class="code-key">age</span>: <span
+                                class="code-number">17</span>,</div>
+                        <div class="code-line indent-1"><span class="code-key">focus</span>: [<span
+                                class="code-string">"Secure Dev"</span>, <span class="code-string">"Electron App
+                                Development"</span>],</div>
+                        <div class="code-line indent-1"><span class="code-key">philosophy</span>: <span
+                                class="code-string">"Local-First, Privacy & Speed"</span>,</div>
+                        <div class="code-line indent-1"><span class="code-key">status</span>: <span
+                                class="code-string">"Optimizing systems ⚡"</span></div>
+                        <div class="code-line">};</div>
+                        <br>
+                        <div class="code-line"><span class="code-keyword">function</span> <span
+                                class="code-func">verifyBuild</span>() {</div>
+                        <div class="code-line indent-1"><span class="code-keyword">return</span> developer.focus.length
+                            > <span class="code-number">0</span> ? <span class="code-string">"Ready"</span> : <span
+                                class="code-string">"Loading"</span>;</div>
+                        <div class="code-line">}</div>
+                        <br>
+                        <div class="code-line output-line">> Running build checks... Done. [OK]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Projects Grid -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="sparkles"></i> Portfolio
+                </div>
+                <h2>Progetti in Evidenza</h2>
+                <p class="section-subtitle">Una selezione di software, applicazioni desktop e strumenti sviluppati con
+                    focus su efficienza e sicurezza.</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- QuantumPlay Card -->
+                <div class="card project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <span class="project-tag">DESKTOP APP</span>
+                    <h3>QuantumPlay</h3>
+                    <p>A premium, modern, and ultra-fast universal game launcher built with Electron, React, and
+                        TypeScript. Say goodbye to scattered game libraries and heavy launch clients.</p>
+                    <div class="tech-badges">
+                        <span>Electron</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Vite</span>
+                        <span>Vanilla CSS</span>
+                    </div>
+                    <a href="https://github.com/skelegamerYT11/QuantumPlay" class="project-link" target="_blank">
+                        GitHub Repository <i data-lucide="external-link"></i>
+                    </a>
+                </div>
+
+                <!-- PassMana Card -->
+                <div class="card project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <span class="project-tag">SECURITY / CRYPTO</span>
+                    <h3>PassMana</h3>
+                    <p>Pass Manager Zero-Knowledge. Un gestore di password sicuro ed offline-first per garantire la
+                        totale riservatezza e privacy delle proprie credenziali locali senza server di terze parti.</p>
+                    <div class="tech-badges">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Zero-Knowledge</span>
+                        <span>Web Crypto</span>
+                        <span>Local Storage</span>
+                    </div>
+                    <a href="https://github.com/skelegamerYT11/PassMana" class="project-link" target="_blank">
+                        GitHub Repository <i data-lucide="external-link"></i>
+                    </a>
+                </div>
+
+                <!-- StealthShell Card -->
+                <div class="card project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="terminal"></i>
+                    </div>
+                    <span class="project-tag">PENTESTING TOOL</span>
+                    <h3>StealthShell</h3>
+                    <p>Crea una shell con una chiavetta digispark bypassando le difese di Windows 11. Script e payload
+                        strutturati per test di penetrazione fisica e automazione di compiti amministrativi.</p>
+                    <div class="tech-badges">
+                        <span>Digispark</span>
+                        <span>Payloads</span>
+                        <span>Windows 11</span>
+                        <span>AV Bypass</span>
+                        <span>DuckyScript</span>
+                    </div>
+                    <a href="https://github.com/skelegamerYT11/StealthShell-Win11-AV-Bypass-Digispark"
+                        class="project-link" target="_blank">
+                        GitHub Repository <i data-lucide="external-link"></i>
+                    </a>
+                </div>
+
+                <!-- InstaOSINT Card -->
+                <div class="card project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <span class="project-tag">OSINT TOOL</span>
+                    <h3>InstaOSINT</h3>
+                    <p>Strumento leggero e performante ideato per scopi educativi ed OSINT, progettato per raccogliere e
+                        analizzare in modo trasparente dati pubblici da account Instagram.</p>
+                    <div class="tech-badges">
+                        <span>Python</span>
+                        <span>OSINT</span>
+                        <span>Reconnaissance</span>
+                        <span>API Scripting</span>
+                    </div>
+                    <a href="https://github.com/skelegamerYT11/InstaOSINT" class="project-link" target="_blank">
+                        GitHub Repository <i data-lucide="external-link"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="code-2"></i> Competenze
+                </div>
+                <h2>Cosa Faccio</h2>
+                <p class="section-subtitle">Le tecnologie e le aree di specializzazione su cui mi concentro
+                    quotidianamente per creare software moderno.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="card skill-card">
+                    <div class="skill-icon"><i data-lucide="layout"></i></div>
+                    <h3>Frontend & Desktop UI</h3>
+                    <p>Progettazione di interfacce fluide con React, TypeScript e HTML/CSS moderni. Integrazione desktop
+                        nativa tramite il framework Electron.</p>
+                </div>
+                <div class="card skill-card">
+                    <div class="skill-icon"><i data-lucide="lock"></i></div>
+                    <h3>Privacy & Security</h3>
+                    <p>Implementazione di architetture zero-knowledge, gestione sicura di credenziali, cifratura dei
+                        dati in locale e studio delle vulnerabilità di sistema.</p>
+                </div>
+                <div class="card skill-card">
+                    <div class="skill-icon"><i data-lucide="cpu"></i></div>
+                    <h3>Automazione & Scripting</h3>
+                    <p>Sviluppo di script rapidi in Python e configurazioni DuckyScript per ottimizzare compiti e
+                        condurre test fisici di sicurezza.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Philosophy Section -->
+        <section id="philosophy" class="section philosophy-section">
+            <div class="glass-box">
+                <div class="philosophy-grid">
+                    <div class="philosophy-info">
+                        <span class="philosophy-badge">Filosofia di Sviluppo</span>
+                        <h2>Local-First. Privacy per Tutti.</h2>
+                        <p>
+                            Credo nello sviluppo di software che rispetti la privacy dell'utente finale. Niente tracker
+                            invasivi, telemetrie nascoste o login obbligatori su cloud esterni quando non strettamente
+                            necessari.
+                        </p>
+
+                        <div class="philosophy-bullets">
+                            <div class="bullet-item">
+                                <div class="bullet-icon"><i data-lucide="database-backup"></i></div>
+                                <div>
+                                    <h4>Dati Locali e Cifratura</h4>
+                                    <p>Prediligo database in locale e schemi crittografici zero-knowledge in modo che i
+                                        dati rimangano di esclusivo possesso del proprietario.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <div class="bullet-icon"><i data-lucide="zap"></i></div>
+                                <div>
+                                    <h4>Ottimizzazione e Velocità</h4>
+                                    <p>Uso linguaggi e framework moderni (come Vite e TypeScript) compilati in modo
+                                        efficiente per mantenere l'impronta di memoria al minimo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Contact -->
+        <section id="contacts" class="section cta-section">
+            <h2>Mettiti in Contatto</h2>
+            <p>Sei interessato al mio lavoro, vuoi collaborare a un progetto open-source o semplicemente scambiare due
+                parole?</p>
+
+            <div class="cta-cards-grid">
+                <a href="https://t.me/MrSkele11" class="card contact-card" target="_blank">
+                    <div class="contact-icon telegram"><i data-lucide="send"></i></div>
+                    <h4>Telegram</h4>
+                    <p>@MrSkele11</p>
+                </a>
+                <a href="https://github.com/skelegamerYT11" class="card contact-card" target="_blank">
+                    <div class="contact-icon github"><i data-lucide="github"></i></div>
+                    <h4>GitHub</h4>
+                    <p>skelegamerYT11</p>
+                </a>
+                <a href="https://www.youtube.com/@MrSkeleRoot" class="card contact-card" target="_blank">
+                    <div class="contact-icon youtube"><i data-lucide="youtube"></i></div>
+                    <h4>YouTube</h4>
+                    <p>@MrSkeleRoot</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>MrSkele &copy; 2026 - Designed & Built by <strong>MrSkele</strong> & <strong>Antigravity</strong>.</p>
+            <p class="credits-sub">⚡ Vibe Coded with 💖 by MrSkele & Antigravity.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script src="script.js"></script>
+</body>
+
+</html>
