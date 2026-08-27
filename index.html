@@ -119,25 +119,31 @@
             <!-- Global Badges -->
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                 <!-- TryHackMe Card -->
-                <a href="https://tryhackme.com/p/MrSkele" target="_blank" class="card project-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; width: 350px; text-decoration: none;">
-                    <h3 style="margin-bottom: 1.5rem;">TryHackMe</h3>
-                    <img src="https://img.shields.io/badge/TryHackMe-MrSkele-B92025?style=for-the-badge" alt="TryHackMe Badge" style="max-width: 100%; border-radius: 8px; height: 35px;">
-                </a>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="https://tryhackme.com/p/MrSkele" target="_blank" class="card project-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; width: 350px; text-decoration: none; margin-bottom: 0;">
+                        <h3 style="margin-bottom: 1.5rem;">TryHackMe</h3>
+                        <img src="https://img.shields.io/badge/TryHackMe-MrSkele-B92025?style=for-the-badge" alt="TryHackMe Badge" style="max-width: 100%; border-radius: 8px; height: 35px;">
+                    </a>
+                    <button onclick="toggleBadges('thm-badges', this)" style="color: #3b82f6; background: none; border: none; cursor: pointer; margin-top: 15px; font-family: inherit; font-size: 1rem; font-weight: 500; text-decoration: underline;">Mostra badge</button>
+                </div>
                 
                 <!-- Hack The Box Card -->
-                <a href="https://app.hackthebox.com/users/MrSkele" target="_blank" class="card project-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; width: 350px; text-decoration: none;">
-                    <h3 style="margin-bottom: 1.5rem;">Hack The Box</h3>
-                    <img src="https://img.shields.io/badge/HackTheBox-MrSkele-9fe03c?logo=hackthebox&style=for-the-badge" alt="HackTheBox Badge" style="max-width: 100%; border-radius: 8px; height: 35px;">
-                </a>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <a href="https://app.hackthebox.com/users/MrSkele" target="_blank" class="card project-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; width: 350px; text-decoration: none; margin-bottom: 0;">
+                        <h3 style="margin-bottom: 1.5rem;">Hack The Box</h3>
+                        <img src="https://img.shields.io/badge/HackTheBox-MrSkele-9fe03c?logo=hackthebox&style=for-the-badge" alt="HackTheBox Badge" style="max-width: 100%; border-radius: 8px; height: 35px;">
+                    </a>
+                    <button onclick="toggleBadges('htb-badges', this)" style="color: #3b82f6; background: none; border: none; cursor: pointer; margin-top: 15px; font-family: inherit; font-size: 1rem; font-weight: 500; text-decoration: underline;">Mostra badge</button>
+                </div>
             </div>
 
-            <!-- Specific Achievements Grid -->
-            <div style="margin-top: 4rem;">
+            <!-- Specific Achievements Grid (TryHackMe) -->
+            <div id="thm-badges" style="margin-top: 4rem; display: none;">
                 <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.5rem;">TryHackMe Achievements</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                     
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(185, 32, 37, 0.2); padding: 1rem; border-radius: 12px; color: #b92025; display: flex; align-items: center; justify-content: center;"><i data-lucide="bot" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/mrrobot.png" alt="Mr. Robot" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">Mr. Robot</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Completing the Mr. Robot room</p>
@@ -145,7 +151,7 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(255, 152, 0, 0.2); padding: 1rem; border-radius: 12px; color: #ff9800; display: flex; align-items: center; justify-content: center;"><i data-lucide="flame" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/3daystreak.png" alt="3 Day Streak" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">3 Day Streak</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Achieving a 3 day hacking streak</p>
@@ -153,7 +159,7 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(255, 152, 0, 0.2); padding: 1rem; border-radius: 12px; color: #ff9800; display: flex; align-items: center; justify-content: center;"><i data-lucide="flame" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/7daystreak.png" alt="7 Day Streak" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">7 Day Streak</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Achieving a 7 day hacking streak</p>
@@ -161,7 +167,7 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(33, 150, 243, 0.2); padding: 1rem; border-radius: 12px; color: #2196f3; display: flex; align-items: center; justify-content: center;"><i data-lucide="globe" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/webbed.png" alt="Webbed" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">Webbed</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Understands how the world wide web works</p>
@@ -169,7 +175,7 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(76, 175, 80, 0.2); padding: 1rem; border-radius: 12px; color: #4caf50; display: flex; align-items: center; justify-content: center;"><i data-lucide="terminal" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/catlinux.png" alt="cat linux.txt" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">cat linux.txt</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Being competent in Linux</p>
@@ -177,7 +183,7 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(255, 215, 0, 0.2); padding: 1rem; border-radius: 12px; color: #ffd700; display: flex; align-items: center; justify-content: center;"><i data-lucide="trophy" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/goldleague.png" alt="Gold League" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">Gold League</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Gold League 1st place</p>
@@ -185,13 +191,21 @@
                     </div>
 
                     <div class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
-                        <div style="background: rgba(156, 39, 176, 0.2); padding: 1rem; border-radius: 12px; color: #9c27b0; display: flex; align-items: center; justify-content: center;"><i data-lucide="smartphone" style="width: 32px; height: 32px;"></i></div>
+                        <img src="assets/badges/thm/firstmobilequiz.png" alt="First Mobile Quiz" style="width: 48px; height: 48px; object-fit: contain;">
                         <div>
                             <h4 style="margin: 0; font-size: 1.1rem; margin-bottom: 0.25rem;">First Mobile Quiz</h4>
                             <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Completing your first quiz or recap on the mobile app!</p>
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- Specific Achievements Grid (HackTheBox) -->
+            <div id="htb-badges" style="margin-top: 4rem; display: none;">
+                <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.5rem;">HackTheBox Achievements</h3>
+                <div style="text-align: center; color: rgba(255,255,255,0.7);">
+                    <p>Ancora nessun badge inserito per Hack The Box. Aggiungi le tue immagini in <code>assets/badges/htb/</code> ed inseriscile qui!</p>
                 </div>
             </div>
         </section>
@@ -421,6 +435,20 @@
         </div>
     </footer>
 
+    <!-- Script per i badge -->
+    <script>
+        function toggleBadges(badgeId, btn) {
+            const el = document.getElementById(badgeId);
+            if (el.style.display === 'none' || el.style.display === '') {
+                el.style.display = 'block';
+                btn.innerText = 'Nascondi badge';
+            } else {
+                el.style.display = 'none';
+                btn.innerText = 'Mostra badge';
+            }
+        }
+    </script>
+    
     <!-- Initialize Lucide Icons -->
     <script src="script.js"></script>
 </body>
